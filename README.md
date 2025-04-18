@@ -21,11 +21,11 @@ This is a React-based TodoList project built to deliver a modern, responsive, an
 
 **SSH**
 ```
-git@github.com:Kmqe/TodoList-react.git
+git@github.com:Kmqe/Todo-list-react.git
 ```
 **HTTPS**
 ```
-https://github.com/Kmqe/TodoList-react.git
+https://github.com/Kmqe/Todo-list-react.git
 ```
 
 2. Install dependencies
