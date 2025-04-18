@@ -149,21 +149,3 @@ function App() {
 export default App;
 
 
-
-
-
-
-
-
-// const initialValue = {
-//   task: "",
-//   tasks: [],
-//   targetTaskInfo: {},
-//   action: "",
-// }
-
-// function reducer(state, action) {
-
-// }
-
-// const [state, dispatch] = useReducer(reducer, initialValue)
