@@ -1,38 +1,201 @@
-.App {
+/* Fonts */
+
+@font-face {
+  font-family: "Tajawal";
+  src: url("/public/fonts/ar/tajwal/Tajawal-Light.ttf");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Tajawal";
+  src: url("/public/fonts/ar/tajwal/Tajawal-Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Tajawal";
+  src: url("/public/fonts/ar/tajwal/Tajawal-Medium.ttf");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Tajawal";
+  src: url("/public/fonts/ar/tajwal/Tajawal-Bold.ttf");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Tajawal";
+  src: url("/public/fonts/ar/tajwal/Tajawal-ExtraBold.ttf");
+  font-weight: 800;
+  font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #2196f3;
+  min-height: 100vh;
+  padding: 100px;
+  overflow-x: hidden;
+}
+
+li {
+  list-style: none;
+}
+
+.app {
+  background-color: #f6f6f6;
+  padding: 25px;
+  border-radius: 10px;
+  width: 550px;
+  margin: 0 auto;
+}
+
+.app.ar {
+  font-family: "Tajawal", sans-serif;
+}
+
+.app > h1 {
+  color: #2196f3;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.app .box-adding {
+  position: relative;
+  margin-top: 30px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.app .box-adding input {
+  display: block;
+  background-color: white;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  padding: 15px 120px 15px 20px;
+  font-size: 25px;
+  border-radius: 50px;
+  border: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app.ar .box-adding input {
+  padding: 15px 20px 15px 120px;
+}
+
+.app .box-adding input:hover,
+.app .box-adding input:focus {
+  outline: none;
+}
+
+.app .box-adding button {
+  cursor: pointer;
+  background-color: #2196f3;
+  color: white;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  padding: 10px 30px;
+  font-size: 20px;
+  font-weight: bold;
+  border: none;
+  border-radius: 0 50px 50px 0;
+}
+
+.app.ar .box-adding button {
+  font-family: inherit;
+  left: 0;
+  right: initial;
+  border-radius: 50px 0 0 50px;
+}
+
+.app ul {
+  list-style: none;
+  padding: 40px 0;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  gap: 15px;
+}
+
+.app ul .task {
+  position: relative;
+}
+
+.app ul .task h3 {
+  background-color: #2196f3;
+  border-radius: 15px;
   color: white;
+  padding: 30px 15px;
+  font-size: 20px;
+  border: none;
+  width: 100%;
+  margin: 0;
+  font-weight: normal;
 }
 
-.App-link {
-  color: #61dafb;
+.app ul .task .icons {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.app.ar ul .task .icons {
+  right: initial;
+  left: 20px;
+}
+
+.app ul .task .icons .icon {
+  color: white;
+  font-size: 20px;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+  border: 2px solid white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.app ul .task .icons .update {
+  background-color: green;
+}
+
+.app ul .task .icons .delete {
+  background-color: red;
+}
+
+.app ul .task .icons .icon:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0px 10px rgba(0, 0, 0, 0.8);
+}
+
+.app .btn-language {
+  padding: 15px 35px;
+  font-size: 20px;
+  border: none;
+  background-color: #2196f3;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.app.ar .btn-language {
+  font-family: inherit;
+}
+
+.app .btn-language:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }

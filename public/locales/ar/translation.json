@@ -1,0 +1,14 @@
+{
+  "To-Do List 📋": "📋 قائمة المهام ",
+  "ar": "الإنجليزية",
+  "ADD": "إضافة",
+  "Close": "إغلاق",
+  "change": "تعديل",
+  "Please confirm change": "يرجى تأكيد التعديل",
+  "Please confirm deletion": "يرجى تأكيد الحذف",
+  "Delete": "حذف",
+  "You are about to delete": "أنت على وشك حذف",
+  "Task updated successfully": "تم تحديث المهمة بنجاح",
+  "Task added successfully": "تمت إضافة المهمة بنجاح",
+  "The task has been successfully removed": "تمت حذف المهمة بنجاح"
+}

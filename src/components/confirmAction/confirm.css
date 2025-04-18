@@ -1,0 +1,85 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.confirm {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.confirm.ar {
+  font-family: "Tajawal", sans-serif;
+}
+
+.confirm .container {
+  padding: 30px;
+  background-color: white;
+  border-radius: 25px;
+}
+
+.confirm .container input {
+  display: block;
+  background-color: white;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  padding: 15px 20px 15px 20px;
+  margin-top: 20px;
+  font-size: 20px;
+  border-radius: 50px;
+  border: none;
+}
+
+.confirm .container input:hover,
+.confirm .container input:focus {
+  outline: none;
+}
+
+.confirm .container p {
+  margin-top: 10px;
+}
+
+.confirm .container .buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 60px;
+}
+
+.confirm .container .buttons button {
+  padding: 15px 25px;
+  border: none;
+  border-radius: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  color: white;
+  transition-duration: 0.3s;
+}
+
+.confirm.ar .container .buttons button {
+  font-family: inherit;
+}
+
+.confirm .container .buttons button:hover {
+  transform: scale(1.03);
+}
+
+.confirm .container .buttons button.change {
+  background-color: #008000;
+}
+
+.confirm .container .buttons button.delete {
+  background-color: red;
+}
+
+.confirm .container .buttons button.close {
+  background-color: #999;
+}
