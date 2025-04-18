@@ -46,6 +46,7 @@ function App() {
     }
   }
 
+  // Change Language
   function changeLang() {
     if (lang === "en") {
       setLang("ar")
@@ -70,8 +71,8 @@ function App() {
     }
     // If there are no tasks in localStorage, create a new array with the new task
     else {
-      tasks = [{ title: inputValue, id: uniqueId() }];
-      dispatch({ type: "ADD_TASK", payload: tasks })
+      tasks.push({ title: inputValue, id: uniqueId() });
+      dispatch({ type: "ADD_TASKS", payload: tasks });
     }
     // Store Tasks in LocalStorage
     localStorage.setItem("tasks", JSON.stringify(tasks))
@@ -122,22 +123,20 @@ function App() {
       <div className="list">
         <ul>
           {
-            state.tasks ?
-              state.tasks.map(task => {
-                return (
-                  <li className="task" key={task.id}>
-                    <h3>{task.title}</h3>
-                    <div className="icons">
-                      <div className="update icon" onClick={() => editTask(task.title, task.id)}>
-                        <FontAwesomeIcon icon={faPenToSquare} />
-                      </div>
-                      <div className="delete icon" onClick={() => deleteTask(task.title, task.id)}>
-                        <FontAwesomeIcon icon={faTrash} />
-                      </div>
+            state.tasks.map(task => {
+              return (
+                <li className="task" key={task.id}>
+                  <h3>{task.title}</h3>
+                  <div className="icons">
+                    <div className="update icon" onClick={() => editTask(task.title, task.id)}>
+                      <FontAwesomeIcon icon={faPenToSquare} />
                     </div>
-                  </li>)
-              })
-              : ""
+                    <div className="delete icon" onClick={() => deleteTask(task.title, task.id)}>
+                      <FontAwesomeIcon icon={faTrash} />
+                    </div>
+                  </div>
+                </li>)
+            })
           }
         </ul>
       </div>
@@ -147,5 +146,4 @@ function App() {
 }
 
 export default App;
-
 
